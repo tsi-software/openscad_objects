@@ -4,8 +4,9 @@
 cli_fn = 64; // This value can be changed by the command line.
 $fn = cli_fn;
 
-gap = 0.15;
-doRadius = 8; // overall length = 8 * 8 = 64
+gap = 0.12; // 0.15;
+doDiameter = 16; // overall length = 16 * 4 = 64
+doRadius = doDiameter / 2;
 
 rotate([0, 45, 0]) {
     donut(doRadius + gap, doRadius);
@@ -17,8 +18,8 @@ rotate([0, 45, 0]) {
 }
 
 module donut(insideRadius, radialRadius) {
-    rotate_extrude(convexity = 10)
+    rotate_extrude(convexity = 10, $fn = cli_fn * 2)
     translate([insideRadius + radialRadius, 0, 0]) {
-        circle(r = radialRadius);
+        circle(r = radialRadius, $fn = cli_fn);
     }
 }

@@ -14,14 +14,14 @@ Raft Layers: 0
 
 cli_fn = 32; // This value can be changed from the OpenSCAD command line.
 $fn = cli_fn;
-fn_Low  = 32;
+fn_Low  = 64;
 fn_Med  = fn_Low * 2;
 fn_High = fn_Low * 4;
 
 omega = 0.001;
 wallWidth = 6.0;
 wallHeight = wallWidth;
-bevelRadius = 1;
+bevelRadius = 0.5;
 bevelSteps = 8;
 
 hookAngle = 36;
