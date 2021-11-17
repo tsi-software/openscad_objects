@@ -1,10 +1,13 @@
 // post-modern-fidget.scad
-// Copyright (c) 2018-2019 Warren Taylor
+// Copyright (c) 2018-2021 Warren Taylor
 
-cli_fn = 64; // This value can be changed by the command line.
+cli_fn = 80; // 64; // This value can be changed by the command line.
 $fn = cli_fn;
 
-gap = 0.12; // 0.15;
+// NOTE: 0.12 is too small - the slicer will fuse the parts.
+// The value of 0.18 was arrived at through trial and error using PrusaSlicer 2.3.1
+gap = 0.18;
+
 doDiameter = 16; // overall length = 16 * 4 = 64
 doRadius = doDiameter / 2;
 
